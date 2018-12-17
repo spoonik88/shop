@@ -81,7 +81,7 @@
                 <li class="nav_list"><a class="menu_link" data-name="Проекты" data-body="Проекты над которыми мы ведем работу" data-picture="minsk" href="#">{{__('pagination.progect')}}</a></li>
                 <li class="nav_list"><a class="menu_link"  data-name="Новости" data-body="Свежие новсти о нас" data-picture="page" href="#">{{__('pagination.news')}}</a></li>
                 <li class="nav_list"><a class="menu_link"  data-name="Контакты" data-body="Наше месторасположение" data-picture="minsk"  href="{{asset('contact')}}">{{__('pagination.contacts')}}</a></li>
-                <li class="nav_list"><a class="menu_link"  data-name="Категории" data-body="Готовые решения для Вас" data-picture="page" href="{{asset('categories')}}">{{__('pagination.products')}}</a></li>
+                <li class="nav_list"><a class="menu_link"  data-name="Категории" data-body="Готовые решения для Вас" data-picture="page" href="{{asset('categories')}}">{{__('pagination.categories')}}</a></li>
 
                 <li id="nav_list-hover" class="nav_list dropdown"><a class="menu_link" data-name="Языки" data-body="Варианты выбора языка" data-picture="page" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> {{$lang}} <span class="caret"></span></a>
                     <ul class="dropdown-menu" >
@@ -130,7 +130,7 @@
        
         <div class="way">
             <ol class="breadcrumb">
-                <li><a href="{{asset('home')}}"></a> {{__('pagination.home')}} <a href="{{(asset($world))}}">{{ $world }}</a> / <a href="{{(asset($world2))}}">{{ $world2 }}</a></li>
+                <li><a href="{{asset('home')}}"></a> {{__('pagination.home')}} / <a href="{{(asset($world))}}">{{ $world }}</a> <a href="{{(asset($world2))}}">{{ $world2 }}</a></li>
             </ol>
         </div>
 

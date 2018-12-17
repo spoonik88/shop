@@ -17,7 +17,7 @@ return [
     // 'next' => 'Next »',
     'home'=>'Главная',
     'news'=>'Новости',
-    'products'=>'Продукты',
+    'categories'=>'Продукты',
     'progect'=>'Проекты',
     'services'=>'Услуги',
     'about_us'=>'О нас',

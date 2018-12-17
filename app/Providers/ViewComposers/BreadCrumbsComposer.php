@@ -20,10 +20,10 @@ class BreadCrumbsComposer{
                 $world = __('pagination.news');
                 break;  
             case 'categories':
-                $world = __('pagination.products');
+                $world = __('pagination.categories');
                 break;  
             case 'product':
-                $world = __('pagination.products');
+                $world = __('pagination.categories');
                 break;  
         }
         if($world == null){

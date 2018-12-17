@@ -14,7 +14,7 @@ return [
     */
     'home'=>'Home',
     'news'=>'News',
-    'products'=>'Products',
+    'categories'=>'categories',
     'services'=>'Services',
     'progect'=>'Progects',
     'contacts'=>'Contacts',
