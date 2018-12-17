@@ -14,7 +14,7 @@ class PoiskController extends Controller
     	$products_more= Tovar::where('body','LIKE',"%$search%")->get();
     	$maintexts= Maintext::where('name','LIKE',"%$search%")->get();
     	$maintexts_more= Maintext::where('name','LIKE',"%$search%")->get();
-    	return view('poisk', compact('products','products_more'));
+    	return view('poisk', compact('products','products_more','maintexts','maintexts_more'));
 
     }
 }

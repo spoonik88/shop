@@ -14,7 +14,10 @@ class SiteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('layouts.base','App\Providers\ViewComposers\SizeComposer');
+         View::composer('layouts.base','App\Providers\ViewComposers\SizeComposer');   //form
+        // View::composer('layouts.base', 'App\Providers\ViewComposers\CookieComposer');//order count
+         View::composer('layouts.base', 'App\Providers\ViewComposers\LangComposer');
+          View::composer('layouts.base', 'App\Providers\ViewComposers\BreadCrumbsComposer');
     }
 
     /**

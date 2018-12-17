@@ -68,8 +68,8 @@
         <nav id="nav" class="navbar navbar-inverse">
 
             <ul class="nav-pills">
-                <li class="nav_list"><a class="menu_link" data-name="О нас" data-body="Узнать подробности" data-picture="minsk" href="#">О нас</a></li>
-                <li id="nav_list-hover" class="nav_list dropdown"><a class="menu_link" data-name="Услуги" data-body="Наши услуги" data-picture="page" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Услуги <span class="caret"></span></a>
+                <li class="nav_list"><a class="menu_link" data-name="О нас" data-body="Узнать подробности" data-picture="minsk" href="#">{{__('pagination.about_us')}}</a></li>
+                <li id="nav_list-hover" class="nav_list dropdown"><a class="menu_link" data-name="Услуги" data-body="Наши услуги" data-picture="page" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> {{__('pagination.services')}} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{asset('design')}}">Дизайн</a></li>
                         <li><a href="#">Разработка</a></li>
@@ -77,19 +77,29 @@
                         <li><a href="#">Продвижение</a></li>
                         <li><a href="#">Поддержка</a></li>
                     </ul>
-                <li class="nav_list"><a class="menu_link" data-name="Проекты" data-body="Проекты над которыми мы ведем работу" data-picture="minsk" href="#">Проекты</a></li>
-                <li class="nav_list"><a class="menu_link"  data-name="Новости" data-body="Свежие новсти о нас" data-picture="page" href="#">Новости</a></li>
-                <li class="nav_list"><a class="menu_link"  data-name="Контакты" data-body="Наше месторасположение" data-picture="minsk"  href="{{asset('contact')}}">Контакты</a></li>
-                <li class="nav_list"><a class="menu_link"  data-name="Категории" data-body="Готовые решения для Вас" data-picture="page" href="{{asset('categories')}}">Категории</a></li> 				
+                </li>
+                <li class="nav_list"><a class="menu_link" data-name="Проекты" data-body="Проекты над которыми мы ведем работу" data-picture="minsk" href="#">{{__('pagination.progect')}}</a></li>
+                <li class="nav_list"><a class="menu_link"  data-name="Новости" data-body="Свежие новсти о нас" data-picture="page" href="#">{{__('pagination.news')}}</a></li>
+                <li class="nav_list"><a class="menu_link"  data-name="Контакты" data-body="Наше месторасположение" data-picture="minsk"  href="{{asset('contact')}}">{{__('pagination.contacts')}}</a></li>
+                <li class="nav_list"><a class="menu_link"  data-name="Категории" data-body="Готовые решения для Вас" data-picture="page" href="{{asset('categories')}}">{{__('pagination.products')}}</a></li>
+
+                <li id="nav_list-hover" class="nav_list dropdown"><a class="menu_link" data-name="Языки" data-body="Варианты выбора языка" data-picture="page" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> {{$lang}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" >
+                        <li><a href="/?lang=en">English</a></li>
+                        <li><a href="/?lang=ru">Russian</a></li>                      
+                          <a href="#"></a><!-- из LangComposer.php через SiteProvider.php-->
+                    </ul>
+                </li>
+                      		
               <!-- Authentication Links -->
                         @guest
                            <span class="formreg_link-right pull-right">
                             <li class="nav_list">
-                               <a class="nav-link" href="{{ route('login') }}">Войти</a>
+                               <a class="nav-link" href="{{ route('login') }}">{{__('pagination.enter')}}</a>
                             </li>
                             <li class="nav_list">
                                 @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">Регистрация</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{__('pagination.login')}}</a>
                                 @endif
                             </li>
                             </span>
@@ -120,7 +130,7 @@
        
         <div class="way">
             <ol class="breadcrumb">
-                <li><a href="#">Главная</a></li>
+                <li><a href="{{asset('home')}}"></a> {{__('pagination.home')}} <a href="{{(asset($world))}}">{{ $world }}</a> / <a href="{{(asset($world2))}}">{{ $world2 }}</a></li>
             </ol>
         </div>
 

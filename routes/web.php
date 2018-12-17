@@ -22,10 +22,19 @@ Route::get('categories', 'TovarController@getAll');
 
 Route::get('basket/add/{id}', 'BasketController@getAdd');
 
-Route::get('basket', 'BasketController@getAll');
+Route::get('basket/delete/all/', 'BasketController@getClearAll');//clear basket
 
+Route::get('basket', 'BasketController@getAll');
 Route::get('basket/delete/{id}', 'basketController@getDelete');
+
 Route::get('poisk', 'PoiskController@getIndex');
+
+Route::group(['middleware' => ['lang']], function(){
+	Route::get('/', 'BaseController@getIndex');
+	Route::get('categories', 'TovarController@getAll');
+	Route::get('basket', 'BasketController@getAll');
+});// middleware Lang
+
 Route::post('ajax', 'AjaxController@postIndex');
 Route::post('order', 'Ordercontroller@postIndex');
 

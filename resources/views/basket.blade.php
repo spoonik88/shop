@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+            	
                 <div class="card-header stext_h1">Мои заказы</div>
 				<form method="post" action="{{asset('order')}}">
 					{!!csrf_field()!!}
@@ -77,7 +78,8 @@
     </div>
 	
 	<div class="col-md-12 text-center">
-       <br><button type="submit" class="btn btn-primary">Заказать</button>  
+       <br><button type="submit" class="btn btn-primary">Заказать</button> 
+       <button type="submit" class="btn btn-primary" name="submit" id="">Очистить</button> 
     </div>
 	     
   </div>

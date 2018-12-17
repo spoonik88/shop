@@ -13,7 +13,17 @@ return [
     |
     */
 
-    'previous' => '« Previous',
-    'next' => 'Next »',
+    // 'previous' => '«Previous',
+    // 'next' => 'Next »',
+    'home'=>'Главная',
+    'news'=>'Новости',
+    'products'=>'Продукты',
+    'progect'=>'Проекты',
+    'services'=>'Услуги',
+    'about_us'=>'О нас',
+    'enter'=>'Войти',
+    'contacts'=>'Контакты',
+    'login'=>'Регистрация'
+
 
 ];

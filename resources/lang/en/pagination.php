@@ -12,8 +12,15 @@ return [
     | you want to customize your views to better match your application.
     |
     */
-
-    'previous' => '« Previous',
-    'next' => 'Next »',
-
+    'home'=>'Home',
+    'news'=>'News',
+    'products'=>'Products',
+    'services'=>'Services',
+    'progect'=>'Progects',
+    'contacts'=>'Contacts',
+    'blog'=>'Blog',
+    'forum'=>'Forum',
+    'enter'=>'enter',    
+    'login'=>'login',
+    'about_us'=>'About us'
 ];

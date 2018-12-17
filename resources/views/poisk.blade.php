@@ -8,14 +8,22 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                        
-                    @endif
-
-                    You are logged in!
+                    @foreach($products as $one)
+                    <div>Продукт: <span>{{$one->name}}</span>
+                     </div>
+                    @endforeach
+					@foreach($products_more as $one)
+                    <div>Найдено совподений на странице продукты: <span>{{$one->name}}</span>
+                     </div>
+                    @endforeach
+					<!-- @foreach($maintexts as $one)
+                    <div>Найдено совподений на странице : <span>{{$one->name}}</span>
+                     </div>
+                    @endforeach
+					@foreach($maintexts_more as $one)
+                    <div>Описание продукта: <span>{{$one->name}}</span>
+                     </div>
+                    @endforeach -->
                 </div>
             </div>
         </div>
